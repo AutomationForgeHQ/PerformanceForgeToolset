@@ -41,6 +41,8 @@ class PERFORMANCEFORGETOOLSET_API UPerformanceForgeToolset : public UToolsetDefi
 	GENERATED_BODY()
 
 public:
+	/** Kept in step with the descriptor by tools/versions.ps1, which fails the check when it drifts. */
+	virtual FString GetToolsetVersion() const override { return TEXT("0.1.1"); }
 
 	/**
 	 * Queue a recording session and open the capture panel as a teleprompter.

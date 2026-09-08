@@ -17,7 +17,7 @@ PerformanceForge behaves — it only removes the agent's way in.
 
 | | |
 |---|---|
-| **Sessions** | `PlanRecordingSession`, `QueueRecordingSession`, `StartPlannedSession`, `ListPerformanceSessions` |
+| **Sessions** | `PlanRecordingSession`, `QueueRecordingSession`, `StartPlannedSession`, `ListPerformanceSessions`, `OpenRecordingSession` |
 | **Takes** | `ChoosePerformanceTake` |
 
 Two of them carry `SpeechLibraryAction` metadata, which is how they appear as buttons in
