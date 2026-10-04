@@ -20,6 +20,7 @@ public class PerformanceForgeToolset : ModuleRules
 		PrivateDependencyModuleNames.AddRange(
 			new string[]
 			{
+				"Projects",         // IPluginManager, so GetToolsetVersion() reads the descriptor
 				"UnrealEd",   // RaiseScriptError comes from KismetSystemLibrary
 				"Slate",      // invoking the capture tab when a session starts
 				"SlateCore",

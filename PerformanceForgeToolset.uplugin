@@ -1,7 +1,7 @@
 {
   "FileVersion": 3,
-  "Version": 1,
-  "VersionName": "0.1.1",
+  "Version": 2,
+  "VersionName": "0.1.2",
   "FriendlyName": "PerformanceForge Toolset",
   "Description": "Planning sessions, running them, and choosing takes - as Model Context Protocol tools. Every function forwards to PerformanceForge's subsystem and adds nothing, so a director's whole flow is reachable by an agent as well as by the panel.",
   "Category": "Automation Forge",

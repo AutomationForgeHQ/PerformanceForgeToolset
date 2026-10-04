@@ -4,6 +4,7 @@
 #include "PerformanceForgeSubsystem.h"
 
 #include "Framework/Docking/TabManager.h"
+#include "Interfaces/IPluginManager.h"
 
 FString UPerformanceForgeToolset::QueueRecordingSession(const FString& SelectionJson)
 {
@@ -104,4 +105,13 @@ UToolCallAsyncResultPerformanceString* UPerformanceForgeToolset::ChoosePerforman
 	});
 
 	return Async;
+}
+
+FString UPerformanceForgeToolset::GetToolsetVersion() const
+{
+	// The descriptor is the version. Reading it here rather than repeating it means there is no
+	// second copy to keep true - and no window, between a bump and a fix, where an agent is told
+	// a number the package does not carry.
+	const TSharedPtr<IPlugin> Plugin = IPluginManager::Get().FindPlugin(TEXT(UE_PLUGIN_NAME));
+	return Plugin.IsValid() ? Plugin->GetDescriptor().VersionName : FString();
 }
